@@ -12,7 +12,7 @@
 
 <header>
     <HeaderLeft>
-        <HeaderLogo src={hotsix} text="hotsixman"/>
+        <HeaderLogo src={hotsix} text="Hotsixman"/>
     </HeaderLeft>
     <HeaderRight>
         <HeaderIcon href="https://github.com/Hotsixisbest" src={github}/>
