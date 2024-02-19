@@ -1,10 +1,33 @@
 <script lang="ts">
+    import { onMount } from "svelte";
     import TimelineEnd from "./timeline-end.svelte";
     import TimelineStart from "./timeline-start.svelte";
+
+    let section:HTMLElement;
+    let content:HTMLElement;
+
+    onMount(() => {
+        let callback = (entries:IntersectionObserverEntry[]) => {
+            entries.forEach(e => {
+                if(e.isIntersecting){
+                    setTimeout(() => {
+                        content.style.opacity = "1";
+                    }, 500);
+                    (e.target as HTMLElement).style.transform = "translateX(0)";
+                    (e.target as HTMLElement).style.opacity = "1";
+                }
+            })
+        }
+        let observer = new IntersectionObserver(callback);
+        observer.observe(section);
+    })
 </script>
 
-<section>
-    <div>
+<section bind:this={section}>
+    <div class="title">
+        Timeline
+    </div>
+    <div bind:this={content}>
         <TimelineStart />
         <slot />
         <TimelineEnd />
@@ -16,14 +39,32 @@
         width: 100%;
 
         display:flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
+
+        transform: translateX(25%);
+        transition: transform 0.5s ease, opacity 0.5s ease;
+        opacity: 0;
+
+        overflow-y:hidden;
     }
 
     div{
         width:90%;
         display: flex;
         flex-direction: column-reverse;
+    }
+
+    .title{
+        font-size:40px;
+        font-weight: bolder;
+        font-family:'Actor';
+    }
+
+    div:not(.title){
+        opacity: 0;
+        transition: opacity 0.5s;
     }
 
     /*mobile*/

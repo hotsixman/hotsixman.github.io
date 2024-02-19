@@ -12,4 +12,10 @@ html, body{
     background-color: #08041b;
     color:white;
     font-family: "Gothic A1", sans-serif;
+
+    overflow-x:hidden;
+}
+
+*:not(body, html){
+    transition: all 0.3s;
 }
