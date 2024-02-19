@@ -1,83 +1,11 @@
 <script lang="ts">
-    import { onMount } from "svelte";
-    import TimelineEnd from "./timeline-end.svelte";
+    import Section from "./section.svelte";
     import TimelineStart from "./timeline-start.svelte";
-
-    let section:HTMLElement;
-    let content:HTMLElement;
-
-    onMount(() => {
-        let callback = (entries:IntersectionObserverEntry[]) => {
-            entries.forEach(e => {
-                if(e.isIntersecting){
-                    setTimeout(() => {
-                        content.style.opacity = "1";
-                    }, 500);
-                    (e.target as HTMLElement).style.transform = "translateX(0)";
-                    (e.target as HTMLElement).style.opacity = "1";
-                }
-            })
-        }
-        let observer = new IntersectionObserver(callback);
-        observer.observe(section);
-    })
+    import TimelineEnd from "./timeline-end.svelte";
 </script>
 
-<section bind:this={section}>
-    <div class="title">
-        Timeline
-    </div>
-    <div bind:this={content}>
-        <TimelineStart />
-        <slot />
-        <TimelineEnd />
-    </div>
-</section>
-
-<style>
-    section {
-        width: 100%;
-
-        display:flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-
-        transform: translateX(25%);
-        transition: transform 0.5s ease, opacity 0.5s ease;
-        opacity: 0;
-
-        overflow-y:hidden;
-    }
-
-    div{
-        width:90%;
-        display: flex;
-        flex-direction: column-reverse;
-    }
-
-    .title{
-        font-size:45px;
-        font-weight: bolder;
-        font-family:'Actor';
-    }
-
-    div:not(.title){
-        opacity: 0;
-        transition: opacity 0.5s;
-    }
-
-    /*mobile*/
-    @media (min-width: 576px) {
-        div{
-            width:90%;
-        }
-    }
-
-    /*large desktop*/
-    @media only screen and (min-width: 1200px){
-        div{
-            width:85%;
-        }
-    }
-</style>
+<Section title="Timeline">
+    <TimelineStart />
+    <slot />
+    <TimelineEnd />
+</Section>

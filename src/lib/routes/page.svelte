@@ -1,5 +1,6 @@
 <script lang="ts">
-    import TimelineRow from "./timeline-row.svelte";
+    import Skills from "./skills.svelte";
+import TimelineRow from "./timeline-row.svelte";
     import Timeline from "./timeline.svelte";
 </script>
 
@@ -11,3 +12,6 @@
         node-hiroba 개발
     </TimelineRow>
 </Timeline>
+<Skills>
+    
+</Skills>
