@@ -24,7 +24,7 @@
         <HeaderLogo src={hotsix} text="Hotsixman"/>
     </HeaderLeft>
     <HeaderRight>
-        <HeaderIcon href="https://github.com/Hotsixisbest" src={github}/>
+        <HeaderIcon href="https://github.com/hotsixman" src={github}/>
         <HeaderIcon href="https://discordapp.com/users/1208793739779379220" src={discord}/>
         <HeaderIcon href="mailto:hotsixman05@gmail.com" src={email}/>
     </HeaderRight>
