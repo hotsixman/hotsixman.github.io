@@ -15,7 +15,3 @@ html, body{
 
     overflow-x:hidden;
 }
-
-*:not(body, html){
-    transition: all 0.3s;
-}
