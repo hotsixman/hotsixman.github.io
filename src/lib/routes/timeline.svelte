@@ -57,7 +57,7 @@
     }
 
     .title{
-        font-size:40px;
+        font-size:45px;
         font-weight: bolder;
         font-family:'Actor';
     }
