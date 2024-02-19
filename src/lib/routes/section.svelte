@@ -51,7 +51,7 @@
     div{
         width:90%;
         display: flex;
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
 
     .title{
