@@ -46,6 +46,8 @@
         opacity: 0;
 
         overflow-y:hidden;
+        
+        margin-bottom: 50px;
     }
 
     div{
