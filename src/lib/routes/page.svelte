@@ -1,6 +1,6 @@
 <script lang="ts">
     import TimelineRow from "./timeline-row.svelte";
-import Timeline from "./timeline.svelte";
+    import Timeline from "./timeline.svelte";
 </script>
 
 <Timeline>

@@ -8,9 +8,18 @@
     import discord from '../../../assets/discord.svg';
     import email from '../../../assets/email.svg';
     import github from '../../../assets/github.svg'
+
+    let header:HTMLElement;
+    let oldscroll = window.scrollY;
+    window.addEventListener('scroll', (event) => {
+        if(oldscroll > window.scrollY){
+            header.style.transform = `translateY(${window.scrollY}px)`;
+        }
+        oldscroll = window.scrollY;
+    })
 </script>
 
-<header>
+<header bind:this={header}>
     <HeaderLeft>
         <HeaderLogo src={hotsix} text="Hotsixman"/>
     </HeaderLeft>
@@ -33,5 +42,9 @@
         display: flex;
         flex-direction: row;
         align-items: center;
+        
+        position:relative;
+
+        z-index: 2;
     }
 </style>
