@@ -12,8 +12,10 @@
     import TimelineRow from "./timeline-row.svelte";
     import Timeline from "./timeline.svelte";
     import SkillIcon from "./skill-icon.svelte";
+    import Introduce from './introduce.svelte';
 </script>
 
+<Introduce/>
 <Timeline>
     <TimelineRow date="2023.4 ~ 2024.2">
         taikowiki.com 개발
