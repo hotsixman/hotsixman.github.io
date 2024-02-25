@@ -1,14 +1,16 @@
 <script lang="ts">
-  import {Router, Route} from 'svelte-routing';
+  import Router from 'svelte-spa-router';
   import Header from './lib/components/header/header.svelte';
   import {default as Index} from './lib/routes/page.svelte';
+  import {default as Projects} from './lib/routes/projects/page.svelte';
 
-  export let url = "";
+  const routes = {
+    '/': Index,
+    '/projects': Projects
+  }
 </script>
 
 <Header/>
 <main>
-  <Router {url}>
-      <Route path="/" component={Index}/>
-  </Router>
+  <Router {routes}/>
 </main>

@@ -22,6 +22,7 @@
 <header bind:this={header}>
     <HeaderLeft>
         <HeaderLogo src={hotsix} text="Hotsixman"/>
+        <HeaderLogo text="Projects" href="/projects"/>
     </HeaderLeft>
     <HeaderRight>
         <HeaderIcon href="https://github.com/hotsixman" src={github}/>
