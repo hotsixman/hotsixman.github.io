@@ -5,6 +5,7 @@
     import ts from '../../assets/skiils/ts.svg';
     import svelte from '../../assets/skiils/svelte.svg';
     import nodejs from '../../assets/skiils/nodejs.svg';
+    import bun from '../../assets/skiils/bun.svg';
     import sveltekit from '../../assets/skiils/sveltekit.svg';
 
     import SkillGroup from "./skill-group.svelte";
@@ -23,6 +24,9 @@
     <TimelineRow date="2023.11 ~">
         node-hiroba 개발
     </TimelineRow>
+    <TimelineRow date="2024.5 ~">
+        taiko.wiki 개발, 운영
+    </TimelineRow>
 </Timeline>
 <Skill>
     <SkillGroup groupName="Languages">
@@ -31,11 +35,12 @@
         <SkillIcon src={js} description="JavaScript: 동적인 웹페이지를 구성하기 위한 언어입니다." color="#f7df1e"/>
         <SkillIcon src={ts} description="TypeScript: 자바스크립트에 타입 명시 등의 기능이 추가된 언어입니다." color="#007acc"/>
     </SkillGroup>
-    <SkillGroup groupName="Frontend Frameworks">
+    <SkillGroup groupName="Frontend">
         <SkillIcon src={svelte} description="Svelte: SPA와 컴포넌트 기반 웹페이지 개발을 위한 자바스크립트 프레임워크입니다." color="#ff3e00"/>
     </SkillGroup>
-    <SkillGroup groupName="Backend Frameworks">
+    <SkillGroup groupName="Backend">
         <SkillIcon src={nodejs} description="Node.js: 브라우저 밖에서 자바스크립트를 실행할 수 있는 런타임 플랫폼입니다." color="#689f63"/>
+        <SkillIcon src={bun} description="Bun: Node.js를 대체할 수 있는 자바스크립트 런타임입니다.." color="#f471b6"/>
     </SkillGroup>
     <SkillGroup groupName="Fullstack Frameworks">
         <SkillIcon src={sveltekit} description="SvelteKit: Svelte 문법을 이용해 웹 서버를 개발할 수 있는 Node.js 프레임워크입니다." color="#ff3e00"/>
