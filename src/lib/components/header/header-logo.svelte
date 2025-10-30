@@ -1,11 +1,13 @@
 <script lang="ts">
-    import { link } from "svelte-routing";
-    export let src:any;
+    export let src:string = '';
     export let text:string;
+    export let href = '/';
 </script>
 
-<a href="/" use:link class="logo">
+<a href={`/#${href}`} class="logo">
+    {#if src}
     <img class="logo-img" {src} alt="hotsix logo" />
+    {/if}
     <span class="logo-text">{text}</span>
 </a>
 

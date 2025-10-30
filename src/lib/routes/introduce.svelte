@@ -42,7 +42,7 @@
         align-items: center;
         column-gap: 40px;
 
-        margin-top:20px;
+        margin-top: 20px;
         margin-bottom: 50px;
     }
 
@@ -58,7 +58,13 @@
         font-family: "Black Han Sans";
         font-size: 100px;
         font-weight: normal;
-
+        color:#08041b;
+        text-shadow: 
+            1px 1px 0 #57fcff,
+            -1px 1px 0 #57fcff,
+            1px -1px 0 #57fcff,
+            -1px -1px 0 #57fcff,
+            0 0 20px #57fcff;
         text-wrap: pretty;
     }
 </style>

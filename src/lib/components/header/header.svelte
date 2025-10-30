@@ -8,6 +8,8 @@
     import discord from '../../../assets/discord.svg';
     import email from '../../../assets/email.svg';
     import github from '../../../assets/github.svg'
+    import type { Writable } from "svelte/store";
+    import { getContext } from "svelte";
 
     let header:HTMLElement;
     let oldscroll = window.scrollY;
@@ -17,11 +19,16 @@
         }
         oldscroll = window.scrollY;
     })
+
+    let isMobile:Writable<boolean> = getContext('isMobile');
 </script>
 
 <header bind:this={header}>
     <HeaderLeft>
         <HeaderLogo src={hotsix} text="Hotsixman"/>
+        {#if !$isMobile}
+            <HeaderLogo text="Projects" href="/projects"/>
+        {/if}
     </HeaderLeft>
     <HeaderRight>
         <HeaderIcon href="https://github.com/hotsixman" src={github}/>
